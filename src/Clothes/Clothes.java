@@ -1,7 +1,9 @@
-package ClothesType;
+package Clothes;
 
-//不会实例化的抽象方法
-//代码逻辑不对啊
+import Player.Player;
+import Prize.Prize;
+
+
 public abstract class Clothes implements Prize{
     //上衣，下装，连衣裙，
     String name;
@@ -21,7 +23,6 @@ public abstract class Clothes implements Prize{
         return charm;
     }
 
-    @Override
     public String getName(){
         return name;
     }

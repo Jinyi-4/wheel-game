@@ -1,4 +1,7 @@
-package Player
+package Player;
+
+import CharacterInventory.*;
+
 public class Player {
     //金钱
     int money;

@@ -1,4 +1,4 @@
-
+package Wheel;
 public class Wheel {
     private static volatile Wheel wheel;
     private Wheel(){};

@@ -1,4 +1,5 @@
-public class Plants {
+package Planting;
+public class Plant {
     //假设植物目前只能用来售卖
     String name;
     int spendTime;
@@ -7,7 +8,7 @@ public class Plants {
     int pay;
     int saleValue;
 
-    public Plants(String name, int spendTime, int growTime, boolean isRipe) {
+    public Plant(String name, int spendTime, int growTime, boolean isRipe) {
 
     }
 }

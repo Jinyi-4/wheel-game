@@ -1,5 +1,6 @@
-import ClothesType.*;
+package Player;
 
+import Clothes.*;
 public class Outfit {
     //装备
     Top top;

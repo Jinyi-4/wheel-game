@@ -1,4 +1,4 @@
-package ClothesType;
+package Clothes;
 
 public class Top extends Clothes {
 

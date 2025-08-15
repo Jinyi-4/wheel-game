@@ -1,4 +1,4 @@
-package ClothesType;
+package Clothes;
 
 public class Hat extends Clothes {
     public Hat(String name, int pay, int charm) {
