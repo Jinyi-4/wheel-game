@@ -29,15 +29,16 @@ public class Player {
     CharacterInventory inventory;
 
     //转盘
+    int n = 0;
     public void spinWheel() {
-//        Clothing prize = Wheel.getInstance().spin(); // 共享转盘
+//        Clothing prize = Wheel.getWheel().spin(); // 共享转盘
 //        inventory.addItem(prize);
 //        System.out.println(name + " 抽到了：" + prize.getName());
 
     }
 
 
-
-
-
+    public void addGold(int amount) {
+        money += amount;
+    }
 }
