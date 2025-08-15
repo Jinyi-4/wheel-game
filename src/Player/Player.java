@@ -1,6 +1,5 @@
-import ClothesType.*;
-
-public class Charcater {
+package Player
+public class Player {
     //金钱
     int money;
     //心情
@@ -10,7 +9,7 @@ public class Charcater {
 
 
     //这个初始化可以使用构造器设计模式
-    Charcater(int money,int mood,int full) {
+    void player(int money, int mood, int full) {
         this.money = money;
         this.mood = mood;
         this.full = full;
@@ -28,9 +27,10 @@ public class Charcater {
 
     //转盘
     public void spinWheel() {
-        Clothing prize = Wheel.getInstance().spin(); // 共享转盘
-        inventory.addItem(prize);
-        System.out.println(name + " 抽到了：" + prize.getName());
+//        Clothing prize = Wheel.getInstance().spin(); // 共享转盘
+//        inventory.addItem(prize);
+//        System.out.println(name + " 抽到了：" + prize.getName());
+
     }
 
 

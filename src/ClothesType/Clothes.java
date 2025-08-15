@@ -2,7 +2,7 @@ package ClothesType;
 
 //不会实例化的抽象方法
 //代码逻辑不对啊
-public abstract class Clothes {
+public abstract class Clothes implements Prize{
     //上衣，下装，连衣裙，
     String name;
     int pay;
@@ -21,6 +21,15 @@ public abstract class Clothes {
         return charm;
     }
 
+    @Override
+    public String getName(){
+        return name;
+    }
+
+    @Override
+    public void applyTo(Player player) {
+
+    }
 }
 
 
