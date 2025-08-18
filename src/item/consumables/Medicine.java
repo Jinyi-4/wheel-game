@@ -1,8 +1,8 @@
-package Consumables;
+package item.consumables;
 
-import Player.Player;
+import player.Player;
 
-public class Medicine extends Consumables{
+public class Medicine extends Consumable {
 
     int health;
 

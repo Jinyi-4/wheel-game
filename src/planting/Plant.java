@@ -1,4 +1,4 @@
-package Planting;
+package planting;
 public class Plant {
     //假设植物目前只能用来售卖
     String name;

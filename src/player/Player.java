@@ -1,10 +1,12 @@
-package Player;
+package player;
 
-import CharacterInventory.*;
+import inventory.*;
+import item.equipment.Equipment;
 
 public class Player {
     //金钱
-    int money;
+    String name;
+    public int money;
     //心情
     int mood;
     // 饱度
@@ -12,7 +14,8 @@ public class Player {
 
 
     //这个初始化可以使用构造器设计模式
-    void player(int money, int mood, int full) {
+    void player(String name,int money, int mood, int full) {
+        this.name=name;
         this.money = money;
         this.mood = mood;
         this.full = full;
@@ -23,17 +26,20 @@ public class Player {
     //上衣和裙子互斥怎么实现？这个代码逻辑怎么处理
 
     //构造器模式？
-    Outfit outfits;
+    Equipment upper;
+    Equipment pants;
+    Equipment dress;
+    Equipment hat;
+    Equipment shoes;
 
     //仓库和槽位
-    CharacterInventory inventory;
+    Inventory inventory;
 
-    //转盘
+    //装备服装
+
+    //转动转盘
     int n = 0;
     public void spinWheel() {
-//        Clothing prize = Wheel.getWheel().spin(); // 共享转盘
-//        inventory.addItem(prize);
-//        System.out.println(name + " 抽到了：" + prize.getName());
 
     }
 

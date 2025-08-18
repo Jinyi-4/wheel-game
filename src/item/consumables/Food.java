@@ -1,8 +1,8 @@
-package Consumables;
+package item.consumables;
 
-import Player.Player;
+import player.Player;
 
-public class Food extends Consumables{
+public class Food extends Consumable {
     int mood;
     int full;
 

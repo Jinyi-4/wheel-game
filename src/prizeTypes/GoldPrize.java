@@ -1,7 +1,7 @@
-package PrizeTypes;
+package prizeTypes;
 
-import Player.Player;
-import Prize.Prize;
+import player.Player;
+import prize.Prize;
 
 public class GoldPrize implements Prize {
     private int amount;

@@ -1,10 +1,10 @@
-package Player;
+package player;
 
-import Clothes.*;
+import item.equipment.*;
 public class Outfit {
     //装备
     Top top;
-    Botton button;
+    Bottom button;
     Dress dress;
     Hat hat;
     Shoe shoe;
