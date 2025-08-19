@@ -2,9 +2,8 @@ package item.consumables;
 
 import item.Item;
 import player.Player;
-import prize.Prize;
 
-public class Consumable extends Item implements Prize {
+public class Consumable extends Item {
     ConsumableType consumableType;
     public int quantity;
 
@@ -13,12 +12,6 @@ public class Consumable extends Item implements Prize {
         this.consumableType = consumableType;
         this.name = name;
         this.quantity = 1;
-    }
-
-    @Override
-    public void applyTo(Player player){
-        //把消耗品加到仓库里
-        //todo:
     }
 
 

@@ -1,24 +1,23 @@
 package player;
 
 import inventory.*;
+import item.Item;
 import item.equipment.Equipment;
 
 public class Player {
     //金钱
     String name;
-    public int money;
+    public int money ;
     //心情
-    int mood;
+    int mood = 100;
     // 饱度
-    int full;
-
+    int full = 100;
+    public int spinCount = 0;
 
     //这个初始化可以使用构造器设计模式
-    void player(String name,int money, int mood, int full) {
+    public  Player(String name,int money) {
         this.name=name;
         this.money = money;
-        this.mood = mood;
-        this.full = full;
     }
 
     //一个是角色有什么衣服，一个是角色穿什么衣服
@@ -27,33 +26,48 @@ public class Player {
 
     //构造器模式？
     Equipment upper;
-    Equipment pants;
+    Equipment bottom;
     Equipment dress;
     Equipment hat;
-    Equipment shoes;
+    Equipment shoe;
 
     //仓库和槽位
-    Inventory inventory;
+    public Inventory inventory = new Inventory();;
 
     //装备服装
     public boolean wearEquipment(Equipment e) {
-        if (e.equipType.equals("连衣裙") && upper ) {
-            System.out.println("连衣裙与上衣/裤子冲突");
-            return false;
+        switch(e.equipType) {
+            case UPPER:
+                if(dress!=null){
+                    dress = null;
+                }
+                upper = e;
+                break;
+            case BOTTOM:
+                if(dress!=null){
+                    dress = null;
+                }
+                bottom = e;
+                break;
+            case DRESS:
+                if(upper!=null||bottom!=null){
+                    upper = null;
+                    bottom = null;
+                }
+                dress = e;
+                break;
+            case HAT:
+                hat = e;
+            case SHOE:
+                shoe = e;
         }
-        if ((e.equipType.equals("上衣") || e.equipType.equals("裤子")) &&
-                wornEquipments.containsKey("连衣裙")) {
-            System.out.println("上衣/裤子与连衣裙冲突");
-            return false;
-        }
-        wornEquipments.put(e.equipType, e);
         System.out.println("穿戴装备成功：" + e.name);
         return true;
     }
     //转动转盘
     int n = 0;
-    public void spinWheel() {
-
+    public void receiveReward(Item item) {
+        inventory.addItem(item, this);
     }
 
 

@@ -2,7 +2,7 @@ package item.consumables;
 
 import player.Player;
 
-public class Medicine extends Consumable {
+public class Medicine  {
 
     int health;
 
@@ -10,15 +10,10 @@ public class Medicine extends Consumable {
 
     //    this.health = health;
     //    this.name = name;
-        this.value = value;
+//        this.value = value;
     }
 
     public int getHealth() {
         return health;
-    }
-
-    @Override
-    public void use(Player player) {
-
     }
 }

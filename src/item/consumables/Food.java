@@ -1,15 +1,17 @@
 package item.consumables;
 
+import item.equipment.EquipType;
 import player.Player;
 
-public class Food extends Consumable {
+public class Food  {
     int mood;
     int full;
 
-    public Food(int mood, int full) {
-        this.mood = mood;
-        this.full = full;
-    }
+//    public Food(int mood, int full) {
+//        this.mood = mood;
+//        this.full = full;
+//    }
+    public Food() {}
 
     public int getMood() {
         return mood;
@@ -19,8 +21,5 @@ public class Food extends Consumable {
         return full;
     }
 
-    @Override
-    public void use(Player player) {
 
-    }
 }

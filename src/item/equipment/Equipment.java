@@ -2,12 +2,12 @@ package item.equipment;
 
 import item.Item;
 import player.Player;
-import prize.Prize;
 
 
-public class Equipment extends Item implements Prize{
+
+public class Equipment extends Item{
     //上衣，下装，连衣裙，
-    EquipType equipType;
+    public EquipType equipType;
     int valueCoins;
 
 //    int pay;
@@ -21,14 +21,15 @@ public class Equipment extends Item implements Prize{
 //        this.pay = pay;
 //        this.charm = charm;
     }
+
+    public Equipment() {
+
+    }
+
     public int getValueCoins(){
         return valueCoins;
     }
 
-    @Override
-    public void applyTo(Player player) {
-
-    }
 }
 
 
