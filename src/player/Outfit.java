@@ -3,7 +3,7 @@ package player;
 import item.equipment.*;
 public class Outfit {
     //装备
-    Top top;
+    Upper upper;
     Bottom button;
     Dress dress;
     Hat hat;

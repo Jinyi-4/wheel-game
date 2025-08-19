@@ -36,7 +36,20 @@ public class Player {
     Inventory inventory;
 
     //装备服装
-
+    public boolean wearEquipment(Equipment e) {
+        if (e.equipType.equals("连衣裙") && upper ) {
+            System.out.println("连衣裙与上衣/裤子冲突");
+            return false;
+        }
+        if ((e.equipType.equals("上衣") || e.equipType.equals("裤子")) &&
+                wornEquipments.containsKey("连衣裙")) {
+            System.out.println("上衣/裤子与连衣裙冲突");
+            return false;
+        }
+        wornEquipments.put(e.equipType, e);
+        System.out.println("穿戴装备成功：" + e.name);
+        return true;
+    }
     //转动转盘
     int n = 0;
     public void spinWheel() {
